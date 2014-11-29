@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+	<!-- **********The Resources Page**********
+	This page has links to other sites -->
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Maggie" content="">
+
+
+    <title>Swim</title>
+
+	<!-- Bootstrap and custom styling for whole site -->
+	<style type = "text/css">
+		@import url(swim.css)	
+	</style> 
+
+    <!-- Custom styles for the navbar -->
+    <link href="justified-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+	  <!-- Navigation Bar -->
+      <div class="masthead">
+        <ul class="nav nav-justified">
+          <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/index.html">Home</a></li>
+		  <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/blog.html">Blog</a></li>
+          <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/compete.php">Compete</a></li>
+		  <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/times.php">Times</a></li>
+          <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/training.html">Training</a></li>
+          <li><a id="active" href="http://ps11.pstcc.edu/~c2230a14/swim/resources.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <!-- Jumbotron Heading -->
+      <div class="jumbotron">
+        <a href="http://ps11.pstcc.edu/~c2230a14/swim/index.html"><img src="swim3.jpg"></a>
+        <p class="lead">All About Swimming</p>
+      </div>
+
+      <!-- Main Body -->
+      <div class="row">
+	  
+		<!-- Picture of swimmer diving -->
+		<div class="col-lg-4">
+			<img src="sports-swimming.png">
+		</div>
+	  
+		<!-- Links Column -->
+        <div class="col-lg-8" style="background-color: #CC99FF;">
+          <h2>Links to Other Resources</h2>
+		  <ul style="font-size: 16px; color: #000066;">
+			
+			<li><a style="color: #000066;" href="http://www.usaswimming.org/DesktopDefault.aspx" target="_blank">USA Swimming</a></li>
+			<li><a style="color: #000066;" href="http://www.enjoy-swimming.com/" target="_blank">Learn to Swim Webiste</a></li>
+			<li><a style="color: #000066;" href="https://www.pinterest.com/coachsha/swimming-life/" target="_blank">A Swimming Pinterest Board</a></li>
+		  </ul>
+		  <br><br>
+          <!--Placeholder for future buttons: <p><a class="btn btn-primary" href="#" role="button">Nah &raquo;</a></p>-->
+        </div>
+      </div> <!-- end row -->
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Maggie Kubarewicz and Karen Cheng 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <script> 
+	/*!
+	* IE10 viewport hack for Surface/desktop Windows 8 bug
+	* Copyright 2014 Twitter, Inc.
+	* Licensed under the Creative Commons Attribution 3.0 Unported License. For
+	* details, see http://creativecommons.org/licenses/by/3.0/.
+	*/
+
+	// See the Getting Started docs for more information:
+	// http://getbootstrap.com/getting-started/#support-ie10-width
+
+	(function () {
+		'use strict';
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style')
+		msViewportStyle.appendChild(
+			document.createTextNode(
+			'@-ms-viewport{width:auto!important}'
+		)
+		)
+		document.querySelector('head').appendChild(msViewportStyle)
+	}
+	})();
+	
+	</script>
+  </body>
+</html>
