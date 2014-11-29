@@ -23,7 +23,7 @@ gender, and for specific types of swim events.-->
     <meta name="description" content="">
     <meta name="Maggie" content="">
     
-    <title>Swim</title>
+    <title>Swimmer's World</title>
 
 	<!-- Bootstrap and custom styling for the whole site -->
 	<style type = "text/css">
