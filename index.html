@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- **************The Home Page***********
+Here there is an about section describing the site,
+and here news about the site will be posted -->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Maggie" content="">
+    
+
+    <title>Swim</title>
+
+	<!-- Bootstrap and custom styling for whole site -->
+	<style type = "text/css">
+		@import url(swim.css)	
+	</style> 
+
+    <!-- Custom styles for the navigation bar. -->
+    <link href="justified-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+	
+	<!--Navigation bar -->
+      <div class="masthead">
+        <ul class="nav nav-justified">
+          <li><a id="active" href="http://ps11.pstcc.edu/~c2230a14/swim/index.html">Home</a></li>
+		  <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/blog.html">Blog</a></li>
+          <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/compete.php">Compete</a></li>
+		  <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/times.php">Times</a></li>
+          <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/training.html">Training</a></li>
+		  <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/resources.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <!-- Jumbotron Heading -->
+      <div class="jumbotron">
+        <a href="http://ps11.pstcc.edu/~c2230a14/swim/index.html"><img src="swim3.jpg"></a>
+        <p class="lead">All About Swimming</p>
+		<img src="swim6.jpg" width="1" height="1" alt="">
+      </div>
+
+      <!-- Main body -->
+      <div class="row">
+	  
+		<!-- News column-->
+        <div class="col-lg-8" style="background-color: #CC99FF;">
+          <h2>News</h2>
+          <p style="font-family: Tahoma, Geneva, sans-serif;">This site has been undergoing some major changes really, 
+			but it's finally starting to take shape. More major changes are expected soon including some games, hopefully.</p>
+			<br>
+			<img src="swim-goggles1.png" width="300" height="150" align="right">
+          <!--Placeholder for a button later: <p><a class="btn btn-primary" href="#" role="button">More?? &raquo;</a></p>-->
+        </div>
+		
+		<!--About Column -->
+		<div class = "col-lg-4">
+		 <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title" style="text-align: center;">About</h3>
+            </div>
+            <div class="panel-body">
+				This website is to create a space on the internet for all things to do with swimming 
+				(even though there are plenty of places already existing for that.) You can search through 
+				a collection of swimming competition times to see how you rank on the "Times" page. You 
+				can add your own times to the collection by going to the "Compete" page and creating an
+				account. You can go to the "Training" page and see instructional videos on swimming,
+				tips, and practice sets you can try on your own. Happy swimming!
+					<br>
+					</div> 
+				</div> <!-- end panel -->
+			</div> <!-- end about column -->
+		</div> <!-- end row -->
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Maggie Kubarewicz and Karen Cheng 2014</p>
+      </div>
+
+    </div> <!-- end container -->
+
+
+     <script> 
+	/*!
+	* IE10 viewport hack for Surface/desktop Windows 8 bug
+	* Copyright 2014 Twitter, Inc.
+	* Licensed under the Creative Commons Attribution 3.0 Unported License. For
+	* details, see http://creativecommons.org/licenses/by/3.0/.
+	*/
+
+	// See the Getting Started docs for more information:
+	// http://getbootstrap.com/getting-started/#support-ie10-width
+
+	(function () {
+		'use strict';
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style')
+		msViewportStyle.appendChild(
+			document.createTextNode(
+			'@-ms-viewport{width:auto!important}'
+		)
+		)
+		document.querySelector('head').appendChild(msViewportStyle)
+	}
+	})();
+	
+	</script>
+  </body>
+</html>
