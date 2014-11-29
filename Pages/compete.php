@@ -30,7 +30,7 @@ later after the approaching due date.-->
     <meta name="description" content="">
     <meta name="Maggie" content="">
 
-    <title>Swim</title>
+    <title>Swimmer's World</title>
 
 	<!-- Custom bootstrap css -->
 	<style type = "text/css">
