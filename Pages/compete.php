@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- ******The Compete Page**********
+<!-- **********The Compete Page**********
 Here users can add, edit, and delete their swimming times
 to the MySQL database.
 
