@@ -79,9 +79,9 @@ class TimeClass {
 		//Select all the fields for a user and order by Distance, Stroke, then Time.
 		 $rows = $db->select("*", "times", "userid = $userid", "Distance, Stroke, Times"); 
             
-		//If they have no records, display error message.
+		//If they have no records, do nothing.
 		 if ($db->numRows == 0) {
-        	 	echo '<h4 style="text-align: center;">There are no swim times yet.</h4><br>';
+            
 		 }
 		//If they have only one record, print with list group.
 		elseif ($db->numRows == 1) {
