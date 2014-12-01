@@ -80,9 +80,9 @@ class TimeClass {
 		 $rows = $db->select("*", "times", "userid = $userid", "Distance, Stroke, Times"); 
             
 		//If they have no records, display error message.
-		 if ($db->numRows == 0)
-            		echo "There are no swim times submitted yet.";    
-       
+		 if ($db->numRows == 0) {
+        	 	echo '<h4 style="text-align: center;">There are no swim times yet.</h4><br>';
+		 }
 		//If they have only one record, print with list group.
 		elseif ($db->numRows == 1) {
 			echo '<a href="#" class="list-group-item active"> Name &emsp;&emsp; Gender &emsp;&emsp;' .
