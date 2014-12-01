@@ -6,13 +6,13 @@
 	Here users can view instructional videos on how to swim,
 	swimming tips, and look at practice sets. 
 	
-	***As of 11/29/2014, I hope to make the javascript more
-	streamlined, maybe add jQuery effects or use that instead,
-	and I had hoped to add the ability for logged in users to
+	***As of 11/30/2014, The javascript was streamlined a little bit.
+	Still might add some jQuery effects later.
+	 I had hoped to add the ability for logged in users to
 	add their own practice sets and search for them, but I 
 	do not think I will have time before the deadline, so 
 	it will have to be added later. -->
-	
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,26 +39,13 @@
 		//Write into div the instructional videos.
 		function learn() {
 		
-			// Declare toggle list variables.
+			// Declare learn toggle list variable.
 			var learn = document.getElementById("learn");
-			var sets = document.getElementById("sets");
-			var tips = document.getElementById("tips");
+	
+			//Set its background color to the active link color.
+			learn.style.backgroundColor = "#CC99FF";
 		
-			// Set toggle list other style options to default.
-			tips.style.backgroundColor = "#fff";
-			tips.style.color = "#555";
-			tips.style.borderColor = "#ddd";
-			
-			sets.style.backgroundColor = "#fff";
-			sets.style.color = "#555";
-			sets.style.borderColor = "#ddd";
-		
-			// Set the selected toggle list style.
-			learn.style.color = "#fff";
-			learn.style.backgroundColor = "#428bca";
-			learn.style.borderColor = "#428bca";
-		
-			// Change things inside the div.
+			//Change inside the div.
 			var x =document.getElementById("change");
 			learn_text = '<h2>Learn to Swim</h2><p>Here are some videos to teach you the basics of swimming.</p><br><br>' +
 				'<iframe width="560" height="315" src="//www.youtube.com/embed/V4Evm1rYDZc" frameborder="0" allowfullscreen></iframe>' +
@@ -74,23 +61,11 @@
 		
 			// Declare toggle list variables.
 			var learn = document.getElementById("learn");
-			var sets = document.getElementById("sets");
 			var tips= document.getElementById("tips");
 		
-			// Set toggle list other styles to default.
-			learn.style.backgroundColor = "#fff";
-			learn.style.color = "#555";
-			learn.style.borderColor = "#ddd";
-			
-			sets.style.backgroundColor = "#fff";
-			sets.style.color = "#555";
-			sets.style.borderColor = "#ddd";
-		
-			// Set toggle list selected styling.
-			tips.style.color = "#fff";
-			tips.style.backgroundColor = "#428bca";
-			tips.style.borderColor = "#428bca";
-		
+			//Set the previously active color of learn to the default color.
+			learn.style.backgroundColor = "#94DBFF";
+
 			// Change inside div.
 			var x = document.getElementById("change");
 			var tip_text = '<h2> Tips </h2><ul style="font-family: Tahoma, Geneva, sans-serif;"><li>Soak your swim suit in cold water for at least a half hour after practice to make it last longer.</li>' +
@@ -107,22 +82,10 @@
 			// Declare toggle list variables.
 			var learn = document.getElementById("learn");
 			var sets = document.getElementById("sets");
-			var tips = document.getElementById("tips");
-		
-			// Set default toggle list styles.
-			learn.style.backgroundColor = "#fff";
-			learn.style.color = "#555";
-			learn.style.borderColor = "#ddd";
-			
-			tips.style.backgroundColor = "#fff";
-			tips.style.color = "#555";
-			tips.style.borderColor = "#ddd";
-			
-			// Set selected toggle list style.
-			sets.style.color = "#fff";
-			sets.style.backgroundColor = "#428bca";
-			sets.style.borderColor = "#428bca";
-		
+
+			//Set the background color of learn back to the default.
+			learn.style.backgroundColor = "#94DBFF";
+				
 			// Change inside the div.
 			var x = document.getElementById("change");
 			var sets_text = '<h2 style="padding-left: 50px;"> Practice Sets </h2><h4> Short Set </h4><ul style="font-family: Tahoma, Geneva, sans-serif;">' +
@@ -180,7 +143,7 @@
           <h2 style="text-align: center;">More</h2>  		  
 		  <!-- List of options -->
           <div class="list-group">
-            <a href="#" id = "learn" class="list-group-item active" onclick="learn();">Learn</a>
+            <a href="#" id = "learn" class="list-group-item" style="background-color: #CC99FF;" onclick="learn();">Learn</a>
             <a href="#" id = "tips" class="list-group-item" onclick="tips();">Tips</a>
             <a href="#" id = "sets" class="list-group-item" onclick="sets();">Sets</a>
           </div>
