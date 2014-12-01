@@ -238,18 +238,18 @@ to the MySQL database. -->
 	
 	
 		//---------------------------Print success or error messages.-------------------------------
+			
+		//Select all of user's times from the database to determine how many already in there.
+		$timesTest = $db->select("ID", "times", "userid = $userid"); 
+			
 		if (isset($_POST['delete']) || isset($_POST['modify']) || isset($_POST['submit'])) { 
-				
-			//Select all of user's times from the database to determine how many already in there.
-			$timesTest = $db->select("ID", "times", "userid = $userid"); 
-				
 			//Print success messages to confirm deletion or modification as long as they have times in the database.
 			if (isset($_POST['submit']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully added.</h4><br>';
 			}
 			elseif (isset($_POST['delete']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully deleted.</h4><br>';
-			}				
+			}
 			elseif (isset($_POST['modify']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully modified.</h4><br>';
 			}
