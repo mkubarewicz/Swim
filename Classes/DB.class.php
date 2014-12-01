@@ -68,7 +68,7 @@ class DB {
 	// update
 	// 
 	// updates a row in the database.
-	// $data is formated as an associative array with column names fo keys.
+	// $data is formatted as an associative array with column names of keys.
 	//
 	public function update($data, $table, $where) {
         $sql = "update $table set ";
@@ -89,7 +89,7 @@ class DB {
 	// insert
 	//
 	// inserts a record into the database.
-	// $data is formated as an associative array with column names fo keys.
+	// $data is formatted as an associative array with column names of keys.
 	//
 	public function insert($data, $table) {
 		$columns = "";
