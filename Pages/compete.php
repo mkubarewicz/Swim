@@ -247,17 +247,24 @@ to the MySQL database. -->
 			if (isset($_POST['submit']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully added.</h4><br>';
 			}
-			if (isset($_POST['delete']) && ($db->numRows != 0)) {
+			elseif (isset($_POST['delete']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully deleted.</h4><br>';
-			}
-			if (isset($_POST['modify']) && ($db->numRows != 0)) {
+			}				
+			elseif (isset($_POST['modify']) && ($db->numRows != 0)) {
 				echo '<h4 style="text-align: center;">Your time was successfully modified.</h4><br>';
 			}
 			//Print error message if user tries to modify or delete with no times in the database.
-			if ((isset($_POST['modify']) || isset($_POST['delete'])) && $db->numRows == 0) {
-				echo '<h4 style="text-align: center;">Please submit at least one time before you modify or delete.</h4><br>';
-					
+			elseif ((isset($_POST['modify'])) && $db->numRows == 0) {
+				echo '<h4 style="text-align: center;">Please submit at least one time before you modify.</h4><br>';	
 			}
+			else {
+				echo '<h4 style="text-align: center;">There are no swim times yet.</h4><br>';
+			}
+				
+		}
+		//Else if they have no times yet and haven't submitted the form.
+		elseif ($db->numRows == 0) {
+			echo '<h4 style="text-align: center;">There are no swim times yet.</h4><br>';
 		}
 	
 	
