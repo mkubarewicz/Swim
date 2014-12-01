@@ -39,7 +39,7 @@ gender, and for specific types of swim events.-->
 
     <div class="container">
 
-	  <!-- Navigation Bar -->
+      <!-- Navigation Bar -->
       <div class="masthead">
         <ul class="nav nav-justified">
           <li><a href="http://ps11.pstcc.edu/~c2230a14/swim/index.html">Home</a></li>
@@ -51,14 +51,6 @@ gender, and for specific types of swim events.-->
         </ul>
       </div>
 
-		<!-- Provide a logout button that links to the logout page, 
-		which destroys the session and returns them to the main page. -->
-		<br><br>
-		<form action="logout.php" method="post">	
-			<button class="nav-justified"  style="float:right; width:10%;" 
-			type="submit" class="btn btn-lg btn-primary btn-block" value="New" name="create-new"/>Log Out</button>
-		</form>
-	  
      <!-- Jumbotron Heading -->
       <div class="jumbotron">
         <a href="http://ps11.pstcc.edu/~c2230a14/swim/index.html"><img src="swim3.jpg"></a>
