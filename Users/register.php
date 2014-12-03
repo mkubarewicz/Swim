@@ -8,7 +8,17 @@
 	
 	require_once 'global.inc.php';
 	
-	//initialize php variables used in the form
+	$userID = "";
+	
+	//Get the user object from the session.
+	if (isset($_SESSION['id'])) {
+		$userID = $_SESSION["id"];
+		$uTool = new UserTools($db);
+		$user = $uTool->get($userID);
+	}
+	
+	
+	//Initialize php variables used in the form.
 	$username = "";
 	$password = "";
 	$password_confirm = "";
@@ -17,10 +27,11 @@
 	$firstName = "";
 	$lastName = "";
 	
-	//check to see that the form has been submitted
+	
+	//Check to see that the form has been submitted.
 	if(isset($_POST['submit-form'])) { 
 	
-		//retrieve the $_POST variables
+		//Retrieve the $_POST variables.
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$password_confirm = $_POST['password-confirm'];
@@ -28,43 +39,43 @@
 		$firstName = $_POST['firstName'];
 		$lastName = $_POST['lastName'];
 	
-		//initialize variables for form validation
+		//Initialize variables for form validation.
 		$success = true;
-		$userTools = new UserTools();
+		$userTools = new UserTools($db);
 		
-		//validate that the form was filled out correctly
-		//check to see if user name already exists
-		if($userTools->checkUsernameExists($username))
-		{
+		//Validate that the form was filled out correctly.
+		//Check to see if user name already exists.
+		if($userTools->userNameExists($username)) {
 			$error .= "That username is already taken.<br/> \n\r";
 			$success = false;
 		}
 	
-		//check to see if twice entered passwords match
+		//Check to see if twice entered passwords match.
 		if($password != $password_confirm) {
 			$error .= "Passwords do not match.<br/> \n\r";
 			$success = false;
 		}
 	
-		if($success)
-		{
-			//prep the data for saving in a new user object if successful username creation.
+		if($success == true) {
+			//Prep the data for saving in a new user object if successful username creation.
+			
+			//$joinDate = "'".date("Y-m-d H:i:s",time())."'"
 			$data['username'] = $username;
 			$data['password'] = md5($password); //encrypt the password for storage
 			$data['email'] = $email;
 			$data['firstName'] = $firstName;
 			$data['lastName'] = $lastName;
+	
+			//Insert the user data into the database.
+			$db->insert($data, 'users');
+			
+			//Create the new user object.
+			$newUser = new User($data, $db);
 		
-			//create the new user object
-			$newUser = new User($data);
-		
-			//save the new user to the database
-			$newUser->save(true);
-		
-			//log them in
+			//Log them in.
 			$userTools->login($username, $password);
 		
-			//redirect them to the competition page they started at.
+			//Redirect them to the competition page they started at.
 			header("Location: compete.php");
 			
 		}
